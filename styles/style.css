@@ -1,0 +1,59 @@
+body {
+    background: #241023;
+    color: white;
+}
+
+.container {
+    background: #6B0504;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.library-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    background: #A3320B;
+}
+
+.In, .Out {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.In {
+    background: #E3B23C;
+}
+
+.Out {
+    background: #DDC9B4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form, label, input {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#submit { 
+    margin-top: 10px;
+}
