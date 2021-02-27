@@ -14,10 +14,6 @@ let myForm = document.getElementById('add-book-form'); // when tagging id, don't
 let checkInButtons = document.getElementsByClassName('book-buttons-in');
 let checkOutButtons = document.getElementsByClassName('book-buttons-out');
 
-// run on page load
-//clearPage();
-
-
 // add a book to library
 myForm.onsubmit = function () {
     let title = document.getElementById('book-title').value;
@@ -83,20 +79,10 @@ function createBook(title, author, numPages) {
     // add any new buttons to buttons array
     checkInButtons = Array.from(document.getElementsByClassName('book-buttons-in'));
     checkOutButtons = Array.from(document.getElementsByClassName('book-buttons-out'));
-
-    // test
-    // myLibrary.forEach(aBook => {
-    //     console.log(aBook);
-    // });
 }
 
 // function to add a book to the html page itself
 function updateDisplay () {
-    // test variables
-    // title="test";
-    // author="test";
-    // numPages=9;
-    
     // clear page
     clearPage();
 
@@ -179,76 +165,3 @@ function clearPage() {
         div.removeChild(div.firstChild)
     }
 }
-
-
-        // style the element
-    // append the element to the correct parent
-    //
-
-
-
-
-// FLOW
-
-// User enters data into the form, when they click submit 
-    // submit button event handler
-    
-// if (myForm) {
-//         myForm.addEventListener('submit', (e) => {
-//         submitHandler(e);
-//         console.log("event listened to")
-//     }) 
-// }
-
-// function submitHandler (e) {
-//     console.log(`${e} was passed to submitHandler`);
-//     console.log(e);
-//     console.log(document.getElementById('.book-title').dataset.value);
-//     let theTitle = document.getElementById('.book-title').value;
-//     let theAuthor = document.getElementById('.author').value;
-//     let theNumPages = document.getElementById('.numPages').value;
-//     let isInOrNot = true;
-//     checkInBook(theTitle, theAuthor, theNumPages, isInOrNot);
-// }
-
-// checkin book (form data, isIn = true)
-// function checkInBook(title, author, numPages, isIn) {
-//     if (isIn) {
-//         console.log(title, author, numPages);
-//     }
-// }
-        // a book is added to checkedin Array and MyLirary array
-        // an element is added to bin.In (function for this - input: book, isIn true if checking in false if checking out boolean)
-        // both in and out displays are rebuilt 
-
-// User clicks "check in" on a .check-out button
-    // checkin book event handler
-    // checkin book (book, isIn = true)
-        // a book is added to checkedin Array
-        // an element is added to bin.In (function for this - input: book, isIn true if checking in false if checking out boolean)
-        // both in and out displays are rebui
-    // removeBook (book, isIn = true)
-        // isIn = true, so remove book from bin.out
-            //remove book from bin.out
-            //remove that element from bin.out 
-
-
-// User clicks "check out" on a check-out button
-    // checkout book event handler 
-    // checkout book (book, isIn = false)
-        // a book is added to checkedOut array
-        // an element is added to bin.Out
-    // removeBook (book, isIn = false)
-        // isIn = fales, so remove book from checked in
-            // the book is removed from bin.In
-            // the element is removed from bin.in
-
-
-// this could be even simpler if instead of using 3 arrays, use 1 array MyLibrary and a book can be checked: "In" or checked: "Out"; re-build the display for each in/out area based on a filter of whether in or out
-// should myLibrary be an object and have its own methods, such as .booksIn and .booksOut, lists of these, etc? 
-
-
-
-// Notes for Refactoring:
-// Check for if a Check in/out button has an event listener on it before attempting to add one. -- remove code bloat
-// Add ability to choose Who the book was checked out  and a way to store the data, so that I can actually use this in my life:) 
